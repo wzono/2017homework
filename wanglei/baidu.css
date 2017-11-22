@@ -1,0 +1,106 @@
+
+a:hover{
+    color: #0000cc !important;
+}
+#shangbiao{
+    height: 63px;
+    right: 0;
+    top: 0;
+    margin: 19px 0 5px;
+}
+
+#shangbiao  a{
+    display:block;
+    float: right;
+    line-height: 24px;
+    font-size: 13px;
+    margin-left: 20px;
+    height: 20px;
+}
+.logo{
+    width:100%;
+    height: 150px;
+    text-align: center;
+}
+#shangbiao a.co,a.co:visited{
+    color:#333333;
+    font-weight: 700;
+}
+#shangbiao a.co1 {
+    color: #333333;
+    font-size: 13px;
+}
+#shangbiao a.co2{
+    color: #333333;
+}
+.form{
+    text-align: center;
+    height: 300px;
+    margin-left: -110px;
+}
+.si2{
+    width: 100px;
+    height: 36px;
+    letter-spacing: 1px;
+    background: #2b99ff;
+    border-bottom: 1px solid #2d78f4;
+    color: white;
+}
+.si1{
+    height: 31px;
+    width: 539.8px;
+    border: 1px solid #b6b6b6;
+}
+.ma{
+    text-align: center;
+    height: 100px;
+}
+.xiabiao1 a,.xiabiao2 a{
+    color: #999999;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+.ys{
+    font-weight: 700;
+    color: #999999;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+.xiabiao1,.xiabiao2{
+    display: block;
+    text-align: center;
+    font-size: 12px;
+}
+.xia{
+    display: inline-block;
+    margin-left:25px !important;
+}
+.hei{
+    line-height: 10px;
+}
+#js {
+    background-color:#2b99ff;
+    color: white !important;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    width: 63px;
+    height: 23px !important;
+    text-align: center;
+}
+.yw{
+    vertical-align: sub;
+    position: relative;
+    top: 3px;
+}
+#image{
+    display:inline-block;
+    width:18px;
+    height:19px;
+    overflow: hidden;
+    margin-left: -130px;
+    position: relative;
+    top: 4px;
+}
