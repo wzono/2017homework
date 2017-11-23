@@ -187,7 +187,7 @@ form{
     height:17px;
     display:inline-block;
     overflow:hidden; /*规定当内容溢出元素框时发生的事情*/
-    background:url(icons_5859e57.png) no-repeat;-_backgroundimage:url(icons_d5b04cc.gif);
+    background:url(icons_5859e57.png) no-repeat;-_background-image:url(icons_d5b04cc.gif);
     background-position:-600px -96px;
     position:relative;
     top:3px;
