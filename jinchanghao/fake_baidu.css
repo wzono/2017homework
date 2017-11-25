@@ -1,7 +1,15 @@
+html {
+    min-height: 700px;
+    height: 100%;
+}
+
 body{
     margin: 0;
     font-size: 12px;
     padding: 0;
+    min-height: 700px;
+    position: relative;
+    height: 100%;
 }
 
 #top{
@@ -72,13 +80,17 @@ form{
 
 .wr{
     position: relative;
-    height: 34px;
-    width: 539px;
-    border: 1px solid #b6b6b6;
-    border-color: #b8b8b8 transparent #ccc #b8b8b8;
-    border-right-width: 0;
+    height: 35px;
+    line-height: 35px;
+    width: 540px;
+    /* border: 1px solid #b6b6b6;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8; */
+    /* border-right-width: 0; */
     display: inline-block;
-    margin-right: -3px;
+    margin-right: -5px;
+    z-index: 1;
+    background: #fff;
+    vertical-align: top;
 }
 
 /*想仿着百度做出一个选中搜索框，外围变化，但好像有点问题*/
@@ -86,16 +98,31 @@ form{
     outline: -webkit-focus-ring-color auto 5px;
 }
 
+.border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 1px solid #bbb;
+}
+
+
 .ipt{
     width:500px;
     height:22px;
     font:16px/18px arial;
     line-height:22px;
-    margin:6px 0 0 7px;
+    margin-left: 10px;
     padding:0;
-    background:transparent;
+    background: transparent;
     border:0;
     outline:0;
+}
+
+.ipt:focus + .border {
+    border-color: #317ef3;
 }
 
 /*参考百度*/
@@ -116,7 +143,7 @@ form{
 
 .bt{
     width:100px;
-    height:37px;
+    height:35px;
     color:#fff;
     font-size:15px;
     letter-spacing:1px;
