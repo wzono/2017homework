@@ -1,0 +1,192 @@
+
+.right{
+    float:right;
+    background-color: white;
+    width:500px;
+    height:64px;
+    margin: auto;
+    padding: 0 0 0 0;
+}
+
+.logo{
+    text-align: center;
+    margin-top: 85px;
+    margin-left: 200px;
+    width: 270px;
+    height: 129px;
+}
+
+.sr{
+    width:539px;
+    height:34px;
+    padding-left:7px;
+    float: left;
+
+
+}
+.right ul li a {
+
+}
+.btn{
+    border:0;
+    width:100px;
+    height:40px;
+    background:#36F;
+    font-size:15px;
+    color:#fff;
+    float: left;
+
+}
+.ssk{
+    background-color: white;
+    width: 650px;
+    height: 320px;
+    margin: auto;
+    text-align: center;
+
+}
+.main{
+    text-align: center;
+}
+
+.pic{
+    width: 892px;
+    height: 231.4px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+
+}
+.mnav{
+
+    text-align: center;
+    margin: auto;
+    font-weight:bold;
+}
+
+.right li{
+
+    width: 45px;
+    list-style: none;
+    line-height:25px;
+    float:left;
+    font-size:13px;
+    text-decoration:underline;
+
+
+}
+a{
+    font-family:"宋体";
+    color: #333333;
+}
+
+
+.list{
+    border:0;
+    height:24px;
+    width:70px;
+    background:#38F;
+    color: white;
+    float: left;
+    margin: auto;
+    text-align: center;
+}
+
+.qrcode-img{
+    width: 100px;
+    height: 68px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+.erweima{
+    width: 60px;
+    height: 60px;
+}
+.shoujibaidu{
+    color: #666;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: white;
+    margin: auto;
+    text-align: center;
+
+}
+.bottom1{
+    background-color: white;
+    width:400px;
+    height: 13px;
+    text-align: center;
+    margin: auto;
+
+
+}
+.bottom1 li{
+    list-style: none;
+    font-size: 12px;
+    color: #999;
+    float: left;
+    width: 85px;
+}
+
+.bottom2_1 li{
+    list-style: none;
+    font-size: 12px;
+    color: #999;
+    float: left;
+    width: 98px;
+
+
+
+}
+.bottom2_1{
+    background-color: white;
+    width:435px;
+    height: 15px;
+    float: left;
+
+
+
+
+}
+.xiahuaxian{
+    text-decoration:underline;
+}
+.bottom2_2{
+    background-color: white;
+    width:220px;
+    height: 15px;
+    text-align: center;
+    float: left;
+
+
+
+
+}
+.bottom2_2 li{
+    list-style: none;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+
+}
+
+.bottom2{
+    background-color: white;
+    width:658px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+
+
+
+}
+
+
+
+
+
+
+
+
+

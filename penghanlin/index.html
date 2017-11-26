@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+  <title>百度一下，你就知道</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="nav-button">
+      <span id="more">更多产品</span>
+    </div>
+    <div class="nav-list">
+      <ul>
+        <li><a href="#"><b>新闻</b></a></li>
+        <li><a href="#"><b>hao123</b></a></li>
+        <li><a href="#"><b>地图</b></a></li>
+        <li><a href="#"><b>视频</b></a></li>
+        <li><a href="#"><b>贴吧</b></a></li>
+        <li><a href="#"><b>学术</b></a></li>
+        <li><a href="#">登录</a></li>
+        <li><a href="#">设置</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="sidebar" id="sidebar">
+  </div>
+  <div class="search">
+    <div class="bd-logo">
+      <img hidefocus="true" src="https://www.baidu.com/img/bd_logo1.png" width="270" height="129">
+    </div>
+    <div class="search-bar">
+      <div class="search-group">
+        <form action="#" method="get">
+          <span class="search-wrapper"><input type="text" class="search-text"/><span class="soutu-btn"></span></span>
+          <span class="search-btn"><input class="search-button" type="submit" value="百度一下"></span>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="qrcode-bar">
+      <div class="qrcode-item">
+        <div class="qrcode-img">
+          <img src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/home/img/qrcode/zbios_efde696.png" alt="" width="100%" height="100%">
+        </div>
+        <div class="qrcode-text">
+          <span><b>手机百度</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="cr-list">
+        <a href="#">把百度设为首页</a>
+        <a href="#">关于百度</a>
+        <a href="#">About Baidu</a>
+        <a href="#">百度推广</a>
+      </div>
+      <div class="cr-list">
+        <span>©2017 Baidu <a href="#" style="margin: 0 3px;">使用百度前必读</a><a href="#" style="margin: 0 3px;">意见反馈</a>京ICP证030173号 <i class="icp"></i> <a href="#">京公网安备11000002000001号</a> <i class="gongan"></i></span>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+<script>
+  $(function(){
+    $('.search-text').focus(function(){
+      $('.search-wrapper').css({ 'border': '1px solid #3385ff', 'border-right-width': '0' });
+    });
+    $('.search-text').blur(function(){
+      $('.search-wrapper').css({
+        'border': '1px solid #b6b6b6',
+        'border-color': '#b8b8b8 #ccc #ccc #b8b8b8',
+        'border-right-width': '0'
+      });
+    });
+    $('#more').mouseover(function () {
+      $('#sidebar').show(300);
+    });
+    $('#sidebar').mouseleave(function () {
+      $('#sidebar').hide(300);
+    });
+  });
+</script>
+</html>

@@ -1,0 +1,232 @@
+html {
+    min-height: 700px;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    font-size: 12px;
+    padding: 0;
+    min-height: 700px;
+    position: relative;
+    height: 100%;
+}
+
+#top{
+    color:#fff;
+    position:absolute;
+    right:0;
+    top:0;
+    margin:19px 0 5px;
+    padding:0 96px 0 0
+}
+
+#top a{
+    float:left;
+    color:#333;
+    font-weight:700;
+    line-height:24px;
+    margin-left:20px;
+    font-size:13px;
+    text-decoration:underline
+}
+
+#top a:hover{
+    color: #00c;
+}
+
+#top .login{
+    font-weight: 400;
+}
+
+#top .hidelist{
+    font-weight: 400;
+}
+
+#top .hidemenu{
+    position: absolute
+}
+
+#top .more{
+    font-weight: 400;    
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    width: 60px;
+    height: 23px;
+    color: #fff;
+    background: #38f;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #38f;
+    margin-left: 19px;
+    margin-right: 2px;
+    text-decoration: none;
+}
+
+.mid{
+    text-align: center;
+    position:relative;
+    top:90px;
+}
+
+form{
+    margin: 22px auto 0;
+    width: 641px;
+    text-align: left;
+    position: relative;
+}
+
+.wr{
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    width: 540px;
+    /* border: 1px solid #b6b6b6;
+    border-color: #b8b8b8 transparent #ccc #b8b8b8; */
+    /* border-right-width: 0; */
+    display: inline-block;
+    margin-right: -5px;
+    z-index: 1;
+    background: #fff;
+    vertical-align: top;
+}
+
+/*想仿着百度做出一个选中搜索框，外围变化，但好像有点问题*/
+.wr:focus{
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    border: 1px solid #bbb;
+}
+
+
+.ipt{
+    width:500px;
+    height:22px;
+    font:16px/18px arial;
+    line-height:22px;
+    margin-left: 10px;
+    padding:0;
+    background: transparent;
+    border:0;
+    outline:0;
+}
+
+.ipt:focus + .border {
+    border-color: #317ef3;
+}
+
+/*参考百度*/
+.stbt{
+    position:absolute;
+    right:11px;
+    top:50%;
+    margin-top:-8px;
+    height:16px;
+    width:18px;
+    background:#fff url(camera_new_5606e8f.png) no-repeat;
+    border: 0;
+}
+
+.stbt:hover{
+    background-position: 0 -20px;
+}
+
+.bt{
+    width:100px;
+    height:35px;
+    color:#fff;
+    font-size:15px;
+    letter-spacing:1px;
+    background:#3385ff;
+    border-bottom:1px solid #2d78f4;
+    outline:medium; /*元素周围轮廓*/
+    border: 0;
+    padding: 0;
+
+}
+
+.bt:hover{
+    background:#317ef3;
+    border-bottom:1px solid #2868c8;
+    *border-bottom:0;
+    box-shadow:1px 1px 1px #ccc;/*给框添加阴影*/
+}
+/*参考完毕*/
+
+.qrcode{
+    text-align:center;
+    position:absolute;
+    bottom:140px;
+    height:60px;
+    width:100%
+}
+
+.qrcode p{
+    text-align: center;
+    font: 12px arial;
+    font-weight: 700;
+    color: #666;
+    line-height:23px;
+    margin:0;
+}
+
+.botton{
+    height: 50px;
+    position: absolute;
+    bottom: 47px;
+    width: 100%;
+    text-align: center;
+    line-height: 22px;
+
+}
+
+.botton a{
+    position: relative;
+    color: #999;
+}
+
+.botton_up a{
+    margin-left: 25px;    
+}
+
+.botton_down p{
+    margin-top: 2px;
+}
+
+.botton_down a{
+    margin: 0;
+    
+}
+
+/*再次参考百度orz*/
+.icon{
+    width:14px;
+    height:17px;
+    display:inline-block;
+    overflow:hidden; /*规定当内容溢出元素框时发生的事情*/
+    background:url(icons_5859e57.png) no-repeat;-_background-image:url(icons_d5b04cc.gif);
+    background-position:-600px -96px;
+    position:relative;
+    top:3px;
+}
+
+.icon2{
+    width:14px;
+    height:17px;
+    display:inline-block;
+    overflow:hidden;
+    background:url(icons_5859e57.png) no-repeat;_background-image:url(icons_d5b04cc.gif);
+    background-position:-623px -96px;
+    position:relative;
+    top:3px;
+}

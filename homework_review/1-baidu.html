@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./cssrest.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_486875_urz1f3yzfsyh9f6r.css">
+  <!-- title icon -->
+  <title>百度一下，你就知道</title>
+  <!-- 为了方便直接写在style内 -->
+  <style>
+    body, html {
+      height: 100%;
+      width: 100%;
+      min-height: 800px;
+      min-width: 600px;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .clearfix::after {
+      display: block;
+      content: '.';
+      width: 0px;
+      height: 0px;
+      visibility: hidden;
+      clear: both;
+    }
+
+    nav .more-application {
+      /* 文字水平垂直居中 */      
+      width: 60px;
+      height: 23px;
+      line-height: 23px;
+      text-align: center;
+
+      background-color: #38f;
+      color: #fff;
+      font-size: 13px;
+
+      /* 指针样式，默认为箭头 */
+      cursor: default; 
+    }
+
+    nav aside.side-bar {
+      /* 设置初始透明度、用作于透明度变换 */
+      opacity: 0;
+
+      /* 为什么不用position:absolute */
+      position: fixed;
+      /* 这两句的作用 */
+      top: 0;
+      bottom: 0;
+
+      /* 居右 */
+      right: 0;
+
+      width: 90px;
+      background: #f9f9f9;
+      color: #000;
+      text-align: center;
+      border-left: 1px solid #e7e7e7;
+      
+      /* css3属性，平移 */
+      transform: translate3d(90px, 0, 0);
+
+      /* 透明度过渡 */
+      -webkit-transition: opacity 0.2s ease-in-out;
+      -moz-transition: opacity 0.2s ease-in-out;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    nav .hover-area {
+      /* 为什么不用float: right */
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      z-index: 2;
+
+      margin: 0;
+
+      /*  */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav .hover-area:hover {
+      color: #000;
+      background: #f9f9f9;
+    }
+
+    nav .hover-area:hover aside.side-bar {
+      z-index: -1;
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    nav .hover-area:hover .more-application {
+      background: transparent;
+      color: #000;
+    }
+    
+    .logo {
+      text-align: center;
+    }
+
+    .search-group {
+      width: 650px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-group form .search-input {
+      width: 490px;
+      height: 34px;
+      line-height: 35px;
+      outline: none;
+      padding-left: 10px;
+      box-sizing: border-box;
+      background: transparent;
+      position: relative;
+      margin-top: 3px;
+      z-index: 1;
+    }
+
+    .search-group form .search-input:focus + .border {
+      border-color: #38f;
+    }
+    .search-group form .search-button {
+      width: 100px;
+      height: 40px;
+      position: relative;
+      left: -6px;
+      top: -2px;
+    }
+    
+    .icon-camera {
+      font-size: 20px;
+      color: #ccc;
+      position: absolute;
+      top: 10px;
+      right: 125px;
+      cursor: pointer;
+      z-index: 2;
+    }
+    
+    .icon-camera:hover {
+      color: #44ceff;      
+    }
+
+    .triple::after {
+      position: absolute;
+      width: 0;
+      height: 0;
+      margin: 100px auto;
+
+      border: 50px solid #000;
+      /* border-top-color: red;
+      border-left-color: yellow;
+      border-right-color: green;
+      border-bottom-color: pink; */
+
+      border-color: transparent transparent pink transparent;
+    }
+
+    .border {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: 1px solid #ccc;
+    }
+
+    .input-group {
+      position: relative;
+      width: 539px;
+      height: 40px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <p>1231231</p>
+    <img src="https://www.baidu.com/img/bd_logo1.png" width="270" height="190">
+  </div>
+
+  <div class="search-group">
+    <form>
+      <div class="input-group">
+        <input type="text" id="search-input" name="search-input" class="search-input">
+        <label for="search-input" class="border"></label>        
+      </div>
+      <button class="search-button">百度一下</button>
+      <span class="iconfont icon-camera"></span>
+    </form>
+  </div>
+  <nav>
+    
+    <div class="hover-area">
+      <a href="" class="more-application clearfix">更多应用</a>
+      <aside class="side-bar">
+      </aside>
+    </div>
+
+    <ul class="nav-list triple">
+      <li>213</li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </nav>
+</body>
+</html>
