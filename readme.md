@@ -137,7 +137,10 @@
 
 效果展示：
 
-![百度拓展-示例图片]()
+![百度拓展-示例图片](https://raw.githubusercontent.com/wingsico/2017homework/master/homework_review/2-baidu-extension/example.png)
 
+### 作业完成情况
+待添加
 
+---
 
