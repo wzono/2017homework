@@ -1,0 +1,361 @@
+body,html{
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  min-width:750px ;
+}
+
+button{
+  border: 0;
+  margin:0;
+}
+
+a:hover{
+  color: #0000cc !important;
+}
+
+.SUP{
+  height: 63px;
+  right: 0;
+  top: 0;
+  margin: 19px 0 5px;
+}
+
+.SUP  a{
+  display:block;
+  float: right;
+  line-height: 24px;
+  font-size: 13px;
+  margin-left: 20px;
+  height: 20px;
+  color:#333333;
+  font-weight: 700;
+}
+
+.move{
+  margin-right: 85px;
+}
+/*更多产品是抄你的*/
+nav .more-application {
+  /* 文字水平垂直居中 */
+  width: 60px;
+  height: 23px;
+  line-height: 23px;
+  text-align: center;
+
+  background-color: #38f;
+  color: #fff;
+  font-size: 13px;
+
+  /* 指针样式，默认为箭头 */
+  cursor: default;
+}
+
+nav aside.side-bar {
+  /* 设置初始透明度、用作于透明度变换 */
+  opacity:10000;
+
+  /* 为什么不用position:absolute */
+  position: fixed;
+  /* css3属性，平移 */
+  transform: translate3d(90px, 0, 0); /* 这两句的作用 */
+  top: 0;
+  bottom: 0;
+
+  /* 居右 */
+  right: 0;
+
+  width: 90px;
+  background: #f9f9f9;
+  color: #000;
+  text-align: center;
+  border-left: 1px solid #e7e7e7;
+
+
+
+  /* 透明度过渡 */
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav .hover-area {
+  /* 为什么不用float: right */
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  z-index: 2;
+
+  margin: 0;
+
+  /*  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .hover-area:hover {
+  color: #000;
+  background: #f9f9f9;
+}
+
+nav .hover-area:hover aside.side-bar {
+  z-index: -1;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+nav .hover-area:hover .more-application {
+  background: transparent;
+  color: #000;
+}
+
+.more-application{
+  position:relative;
+  top:8px;
+}
+/* 其它都是一样的就没加  直加了一个*/
+.side_href0{
+  display: block;
+  position: relative;
+  top: 50px;
+}
+.side_icon0{
+  display: block;
+  width: 66px;
+  height: 77px;
+  text-align: center;
+  font-size:13px;
+  position: relative;
+  top: 55px;
+  left: 10px;
+  border-bottom: solid 1px #7e8c8d;
+  border-top: solid 1px #7e8c8d;
+}
+
+.move_icon0{
+  height: 36px;
+  width: 36px;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto 0 auto;
+  position: relative;
+  top: 15px;
+}
+
+.move_font0{
+  position: relative;
+  top: 18px;
+}
+
+
+.logo{
+  width:100%;
+  height: 150px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.search_group{
+  text-align: center;
+  height: 50px;
+  margin-left: -10px;
+}
+
+#search_input{
+  width:540px ;
+  height:34px;
+  border: 1px solid #cccccc;
+  margin: 0;
+  padding:0;
+}
+
+.move_result{
+  text-align: center;
+}
+
+.search_result{
+  display: inline-block;
+  width:542px;
+  height:250px;
+  border:0;
+  margin: -14px auto;
+  text-align: center;
+}
+
+#search_result ul{
+  height:auto;
+  border:0px solid #ccc;
+}
+
+#search_result ul li{
+  display: block;
+  width:100%;
+  height:30px;
+  font-size: 16px;
+}
+
+#search_result ul li a{
+  text-decoration:none;
+}
+#search_result ul {
+  display:block;
+  background:#ccc;
+  color:#fff;
+}
+
+#list{
+  height: 200px;
+  width: auto;
+}
+
+.search_button {
+  width: 100px;
+  height: 36px;
+  letter-spacing: 1px;
+  background: #2b99ff;
+  color: white;
+  position: relative;
+  top: 1px;
+  font-color:white;
+}
+
+.search_input{
+   width:540px;
+  height: 34px;
+  border: solid 1px #b6b6b6;
+  position: relative;
+  top: 1px;
+ }
+
+.search_creama{
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  overflow: hidden;
+  position: relative;
+  top: 5px;
+  margin-left: -130px;
+  cursor: pointer;
+}
+
+.search_creama:hover{
+  color: #2d78f4 !important;
+}
+
+.SUB1 a,.SUB2 a{
+  color: #999999;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+.QR_group{
+  width:100%;
+  height: 85.4px;
+  text-align: center;
+}
+
+.QR_font{
+  font-weight: 700;
+  color: #999999;
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+.SUB{
+  height: 44.8px;
+  width: 100%;
+  line-height: 36px;
+}
+.SUB1,.SUB2{
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+.SUB1{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 21.6px;
+}
+
+.SUB2 {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 27.2px;
+}
+
+.SUB2_image{
+  vertical-align: sub;
+  position: relative;
+  top: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
