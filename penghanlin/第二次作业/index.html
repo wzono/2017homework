@@ -48,9 +48,7 @@
         <form id="form" action="https://www.baidu.com/s" method="get">
           <span class="search-wrapper"><input id="word" name="wd" type="text" class="search-text" autocomplete="off"/><span class="soutu-btn"></span></span>
           <span class="search-btn"><input class="search-button" type="submit" value="百度一下"></span>
-          <div id="sug" class="suggestion">
-            <ul></ul>
-          </div>
+          <ul id="sug" class="suggestion"></ul>
         </form>
       </div>
     </div>
@@ -108,17 +106,17 @@
         jsonp: 'cb',
         success: function (data) {
 //          alert(data.s[0]);
-          $('#sug ul').empty();
+          $('#sug').empty();
           if (data.s[0] != undefined) {
             for (var i = 0; i < data.s.length; i++ ) {
-              $('#sug ul').append(
+              $('#sug').append(
                 '<li><a href="https://baidu.com/s?wd=' + data.s[i] + '">' + data.s[i] + '</a></li>'
               );
             }
             $('#sug').show();
           } else {
             $('#sug').hide();
-            $('#sug ul').empty();
+            $('#sug').empty();
           }
         }
       })

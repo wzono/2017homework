@@ -130,6 +130,7 @@ li#settings:hover .settingLists {
 .suggestion {
   width: 539px;
   height: auto;
+  background: #fff;
   border: 1px solid #ccc;
   border-top: transparent;
   display: none;
@@ -213,7 +214,7 @@ li#settings:hover .settingLists {
 .footer {
   width: 100%;
   position: absolute;
-  z-index: 9;
+  z-index: -9;
   bottom: 0;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
