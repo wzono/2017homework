@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_490455_dkne9ru9sndvlsor.css">
+
+</head>
+<body>
+    <div class="right">
+        <ul>
+            <li><strong><a href="#" class="mnav" >新闻</a></strong></li>
+            <li><strong><a href="#" class="mnav" >hao123</a></strong></li>
+            <li><strong><a href="#" >地图</a></strong></li>
+            <li><strong><a href="#" >视频</a></strong></li>
+            <li><strong><a href="#" >贴吧</a></strong></li>
+            <li><strong><a href="#" >学术</a></strong></li>
+            <li><a href="#" >登录</a></li>
+            <li><a href="#" class="setting">设置</a></li>
+        </ul>
+    </div>
+    <nav>
+        <div class="hover-area">
+            <a href="#" class="more-production clearfix">更多产品</a>
+            <aside class="side-bar"></aside>
+        </div>
+    </nav>
+
+
+    <div class="logo">
+        <img class="pic" src="//www.baidu.com/img/bd_logo1.png" width="270px" height="129px"/>
+    </div>
+
+
+    <div class="search-group">
+        <input type="text" id="search-input"  class="search-input" placeholder="越越姐姐已萌出天际">
+        <input class="search-button" type="submit" value="百度一下" />
+        <span class="iconfont icon-camera"></span>
+    </div>
+
+
+    <div class="drop-down">
+        <table cellpadding='2' cellspacing='0'>
+            <tbody>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            <tr><td></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function hideTds(){
+            var tds = document.querySelectorAll('td');
+            for (var i = 0; i < 10; i++){
+                tds[i].style.display = 'none';
+            }
+        }
+        hideTds()
+        document.querySelector('#search-input').onkeyup = function(){
+            var tds = document.querySelectorAll('td');
+            for (var i = 0; i < 10; i++){
+                tds[i].innerHTML = '';
+            }
+            hideTds();
+            if (this.value.trim() === ''){
+                return;
+            }
+
+            var s = document.createElement('script');
+            s.src = 'http://unionsug.baidu.com/su?wd=' + encodeURI(this.value.trim()) + '&p=3&cb=fn';
+            document.body.appendChild(s);
+        }
+        function fn(data){
+            var tds = document.querySelectorAll('td');
+            data.s.forEach(function(item, index){
+                tds[index].style.display = '';
+                tds[index].innerHTML = item;
+            });
+                                                       // delete scripts
+            var s = document.querySelectorAll('script');
+            for (var i = 1, len = s.length; i < len; i++){
+                document.body.removeChild(s[i]);
+            }
+        }
+        document.querySelector('tbody').onclick = function(e){
+            var wd = e.target.innerHTML;
+            window.open('https://www.baidu.com/s?word=' + encodeURI(wd));
+        }
+        document.onclick = function(e){
+            if (e.target === document.body){
+                hideTds();
+            }
+        }
+    </script>
+
+
+<div class="bottom">
+    <img src="erweima.png" class="qrcode-img" >
+    <div class="shoujibaidu">手机百度</div>
+    <div class="bt-list">
+        <ul>
+            <li><a href="#" >把百度设为首页</a></li>
+            <li><a href="#" >关于百度</a></li>
+            <li><a href="#" >About Baidu</a></li>
+            <li><a href="#" >百度推广</a></li>
+        </ul>
+    </div>
+    <span class="bt-list-2">©2017 Baidu
+        <a href="#" style="margin: 0 3px;">使用百度前必读</a>
+        <a href="#" style="margin: 0 3px;">意见反馈</a>京ICP证030173号
+        <i class="icp"></i>
+        <a href="#">京公网安备11000002000001号</a>
+        <i class="gongan"></i>
+    </span>
+</div>
+
+
+</body>
+</html>
