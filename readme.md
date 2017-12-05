@@ -177,8 +177,12 @@
 5. window.alert
 
 效果展示：
-
+1. 文字查找替换
+ ![](https://github.com/wingsico/2017homework/blob/master/homework_review/3-words-carry-replace/word-replace.gif?raw=true)
+2. 文字搬运
+    ![](https://github.com/wingsico/2017homework/blob/master/homework_review/3-words-carry-replace/word-carry.gif?raw=true)
 ### 作业完成情况
+待跟进
 ---
 
 
