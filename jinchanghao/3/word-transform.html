@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <title>Document</title>
+  <style>
+    .text {
+      height: 600px;
+    }
+
+    button {
+      width: 100%;
+
+    }
+
+    .mid {
+      height: 600px;
+    }
+
+    .loading {
+      position: relative;
+      top: 150px;
+      text-align: center;
+      display: block;
+
+    }
+
+    .ld1 {
+      border: 1px solid blue;
+      display: block;
+      width: 131.663px;
+      height: 20px;
+      text-align: center;
+    }
+
+    .ld1_x {
+      display: inline-block;
+      background: blue;
+      position: absolute;
+      left: 0;
+      width: 0px;
+      height: 20px;
+      color: yellow;
+
+    }
+
+    .ld2 {
+      position: relative;
+      top: 50px;
+    }
+
+    .ld2_x {
+      border: 1px solid blue;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="left col-md-5">
+        <div class="text" id="lf">
+          <pre>
+    一群嗜血的蚂蚁 被腐肉所吸引
+    我面无表情 看孤独的风景
+    失去你 爱恨开始分明
+    失去你 还有什么事好关心
+    当鸽子不再象征和平
+    我终于被提醒
+    广场上喂食的是秃鹰
+    我用漂亮的押韵
+    形容被掠夺一空的爱情
+    啊 乌云开始遮蔽 夜色不干净
+    公园里 葬礼的回音 在漫天飞行
+    送你的白色玫瑰
+    在纯黑的环境凋零
+    乌鸦在树枝上诡异的很安静
+    静静听 我黑色的大衣
+    想温暖你日渐冰冷的回忆
+    走过的 走过的 生命
+    啊 四周弥漫雾气
+    我在空旷的墓地
+    老去后还爱你
+    为你弹奏肖邦的夜曲
+    纪念我死去的爱情
+    跟夜风一样的声音
+    心碎的很好听
+    手在键盘敲很轻
+    我给的思念很小心
+    你埋葬的地方叫幽冥</pre>
+        </div>
+      </div>
+      <div class="mid col-md-2">
+        <div>
+          <button id="bt" onclick="doit()">搬运</button>
+          <div class="loading" id="ld">
+            <div class="ld1">
+              <span class="ld1_x" id="ld1_1"></span>
+            </div>
+            <div class="ld2">
+              <span class="ld2_x" id="ld2_1"></span>
+              <span class="ld2_x" id="ld2_2"></span>
+              <span class="ld2_x" id="ld2_3"></span>
+              <span class="ld2_x" id="ld2_4"></span>
+              <span class="ld2_x" id="ld2_5"></span>
+              <p id="tn"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right col-md-5">
+        <div class="text" id="rt">
+          <pre></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var i = 0;
+    var id = "";
+    var num = 0;
+    var lftext = document.getElementById("lf");
+    var rttext = document.getElementById("rt");
+    var raw = document.getElementById("lf").innerText;
+    var time = 0;
+    var timenum = raw.length;
+    var array = raw.split("");
+
+    function loading1() {
+      var percent = num / timenum;
+      document.getElementById("ld1_1").style.width = (percent * 131.663 + "px");
+      document.getElementById("ld1_1").innerText = Math.floor(percent * 100) + "%";
+      r = setTimeout("loading1 ()", time);
+    }
+
+    function loading2() {
+      if (i == 5) {
+        document.getElementById("ld2_5").style.background = "white"
+        i = 1;
+      }
+      else {
+        i += 1;
+      }
+      id = "ld2_" + i;
+      document.getElementById(id).style.background = "black";
+      if (i != 1) {
+        id = "ld2_" + (i - 1);
+        document.getElementById(id).style.background = "white";
+      }
+      t = setTimeout("loading2 ()", 1000);
+    }
+
+    function transform(x) {
+      lftext.innerHTML = "<pre>" + x.slice(num).join("") + "</pre>";
+      rttext.innerHTML = "<pre>" + x.slice(0, num).join("") + "</pre>";
+      num += 1;
+      time = (timenum % 50);
+      document.getElementById("tn").innerText = num + "/" + timenum;
+      if (num == timenum) {
+        document.getElementById("bt").innerText = "搬运完成";
+        document.getElementById("ld").style.display = "none";
+        clearTimeout(t);
+      }
+      else {
+        setTimeout("transform(array)", time);
+      }
+
+    }
+
+    function doit() {
+      if (lftext.innerText != "") {
+        document.getElementById("bt").innerText = "搬运中";
+        document.getElementById("ld").style.display = "block"
+        transform(array);
+        loading1();
+        loading2();
+      }
+      else {
+        window.alert("已经搬运完成了哦~");
+      }
+
+    }
+
+
+  </script>
+
+</body>
+
+</html>
