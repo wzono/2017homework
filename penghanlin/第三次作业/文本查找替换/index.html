@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>搜索文字</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default" style="margin-top: 2em;">
+          <div class="panel-heading">
+            <div class="panel-title text-center">
+              搜索文字
+            </div>
+          </div>
+          <div class="panel-body">
+            <div action="#" class="form-inline">
+              <label for="">查找&nbsp;<input id="search" type="text" class="form-control"></label>
+              <label for="">替换&nbsp;<input id="replace" type="text" class="form-control"></label>
+              <button id="findBtn" class="btn btn-default">查找</button>
+              <button id="rplBtn" class="btn btn-danger">替换</button>
+            </div>
+            <div id="text" style="margin-top: 2em;">
+              生活是人间在繁华的演出，沉睡是所有故事的收尾。谁不是生命的漫游者？谁没在云端闲情过？生命，只是一场唯有一次的真实梦境。新的阳光里，香樟哭了，那些忧伤化作清晨的雾被蒸干了。因为有阳光的揩拭，香樟才敢放肆泪珠，那么，我的眼泪呢？
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  var findBtn = document.getElementById('findBtn');
+  var rplBtn = document.getElementById('rplBtn');
+  var searchText = document.getElementById('search');
+  var replaceText = document.getElementById('replace');
+  var textBox = document.getElementById('text');
+
+  findBtn.onclick = function () {
+    if (searchText.value) {
+      var regSearch = new RegExp(searchText.value);
+      if (regSearch.test(textBox.innerText)) {
+        textBox.innerHTML = textBox.innerText.split(searchText.value).join('<span style="color: #ff493d; font-size: 16px;">' + searchText.value + '</span>');
+      } else {
+        alert('没有找到哦～');
+      }
+    } else {
+      alert('要输入搜索的内容哦～');
+    }
+  }
+
+  rplBtn.onclick = function () {
+    if (searchText.value != null && replaceText.value != null) {
+      var regSearch = new RegExp(searchText.value)
+      if (regSearch.test(textBox.innerText)) {
+        textBox.innerHTML = textBox.innerText.split(searchText.value).join('<span style="color: #ff493d; font-size: 16px;">' + replaceText.value + '</span>');
+      } else {
+        alert('没有找到哦～');
+      }
+    } else {
+      alert('要指定目标和替换内容哦～');
+    }
+  }
+</script>
+</html>
