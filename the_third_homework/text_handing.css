@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #E9967A;
+    font-weight: 500;
+}
+
+.text-handing{
+    width: 900px; 
+    height: 400px;
+    margin: 20px auto;
+}
+
+.before, .after{
+    vertical-align:top;
+    display: inline-block;
+    width:260px;
+    height:320px;
+    margin: 20px;
+    border: 1px solid #778899;
+    resize:none;
+    padding: 10px;
+}
+
+.operate{
+    vertical-align:top;
+    display: inline-block;
+    width: 200px;
+    height:340px;
+    margin: 20px 0px;
+    border: 1px solid #778899;
+}
+/* 在flex布局中子元素width变小 */
+
+button{
+    font-size: 20px;
+    margin: 50px 25px;
+    width:150px;
+    height: 40px;
+    background-color: #E9967A;
+    color: #ffffff;
+    border: 1px solid #E9967A;
+    border-radius: 5px;
+    font-weight: 400;
+}
+
+.progress-one{
+    width: 160px;
+    height: 25px;
+    margin-left: 19px;
+    border: 1px solid #778899;
+}
+
+.progressbar{
+    width: 0;
+    height: 25px;
+    background-color: #E9967A;
+}
+
+.progress-two{
+    margin-left: 20px;
+}
+
+.progress-two span{
+    margin-right: 2px;
+    margin-top:20px;
+    display: inline-block;
+    height: 50px;
+    width:25px;
+    border: 1px solid #778899;
+}
+
+.on{
+    background-color: #E9967A;
+}
+
+.progress-three{
+    text-align: center;
+    margin-top:5px;
+    font-size: 20px;
+}
+
+
