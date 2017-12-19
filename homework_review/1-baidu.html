@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./cssrest.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_486875_urz1f3yzfsyh9f6r.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <!-- title icon -->
   <title>百度一下，你就知道</title>
   <!-- 为了方便直接写在style内 -->
@@ -23,14 +23,7 @@
       font-size: 16px;
     }
 
-    .clearfix::after {
-      display: block;
-      content: '.';
-      width: 0px;
-      height: 0px;
-      visibility: hidden;
-      clear: both;
-    }
+
 
     nav .more-application {
       /* 文字水平垂直居中 */      
@@ -49,11 +42,12 @@
 
     nav aside.side-bar {
       /* 设置初始透明度、用作于透明度变换 */
-      opacity: 0;
+      opacity:10000;
 
       /* 为什么不用position:absolute */
       position: fixed;
-      /* 这两句的作用 */
+      /* css3属性，平移 */
+      transform: translate3d(90px, 0, 0); /* 这两句的作用 */
       top: 0;
       bottom: 0;
 
@@ -66,8 +60,7 @@
       text-align: center;
       border-left: 1px solid #e7e7e7;
       
-      /* css3属性，平移 */
-      transform: translate3d(90px, 0, 0);
+
 
       /* 透明度过渡 */
       -webkit-transition: opacity 0.2s ease-in-out;
@@ -146,7 +139,7 @@
       position: absolute;
       top: 10px;
       right: 125px;
-      cursor: pointer;
+      cursor:
       z-index: 2;
     }
     
@@ -207,12 +200,13 @@
     <div class="hover-area">
       <a href="" class="more-application clearfix">更多应用</a>
       <aside class="side-bar">
+        <li>123</li>
       </aside>
     </div>
 
     <ul class="nav-list triple">
-      <li>213</li>
-      <li></li>
+      <li style="color: red">213</li>
+      <li>323</li>
       <li></li>
       <li></li>
     </ul>
